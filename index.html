@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AutoVerse - Nền tảng khám phá và tìm kiếm xe hơi hàng đầu Việt Nam. Tìm kiếm, so sánh và đánh giá hàng nghìn mẫu xe từ các thương hiệu nổi tiếng.">
+  <meta name="keywords" content="xe hơi, ô tô, mua xe, so sánh xe, đánh giá xe, xe sang, xe điện">
+  <title>AutoVerse | Khám Phá Thế Giới Xe Hơi</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏎️</text></svg>">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">🏎️</span>
+        <span class="logo-text">Auto<span class="gradient-text">Verse</span></span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="#hero" class="nav-link active">Trang chủ</a></li>
+        <li><a href="#featured" class="nav-link">Xe nổi bật</a></li>
+        <li><a href="#categories" class="nav-link">Danh mục</a></li>
+        <li><a href="#comparison" class="nav-link">So sánh</a></li>
+        <li><a href="#news" class="nav-link">Tin tức</a></li>
+        <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-search-btn" id="search-open" aria-label="Tìm kiếm">🔍</button>
+        <a href="#cta" class="btn-primary nav-cta">Lái thử ngay</a>
+      </div>
+
+      <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu-panel">
+    <button class="mobile-close-btn">✕</button>
+    <a href="#hero" class="mobile-nav-link">Trang chủ</a>
+    <a href="#featured" class="mobile-nav-link">Xe nổi bật</a>
+    <a href="#categories" class="mobile-nav-link">Danh mục</a>
+    <a href="#comparison" class="mobile-nav-link">So sánh</a>
+    <a href="#news" class="mobile-nav-link">Tin tức</a>
+    <a href="#contact" class="mobile-nav-link">Liên hệ</a>
+    <div style="margin-top: 24px;">
+      <a href="#cta" class="btn-primary" style="width: 100%; justify-content: center;">Lái thử ngay</a>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="search-modal">
+    <div class="search-modal-overlay"></div>
+    <div class="search-modal-content">
+      <input type="text" class="search-modal-input" placeholder="Tìm kiếm xe, thương hiệu, tin tức... (Ctrl+K)">
+      <div class="search-modal-suggestions">
+        <div class="search-suggestion">
+          <span class="suggestion-icon">🔥</span> Mercedes-Benz S-Class 2025
+        </div>
+        <div class="search-suggestion">
+          <span class="suggestion-icon">⚡</span> Tesla Model S Plaid
+        </div>
+        <div class="search-suggestion">
+          <span class="suggestion-icon">🏎️</span> Porsche 911 Turbo S
+        </div>
+        <div class="search-suggestion">
+          <span class="suggestion-icon">📰</span> Tin tức xe điện mới nhất
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1920&q=80" alt="Luxury car background">
+    </div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <canvas class="particles-canvas"></canvas>
+
+    <div class="hero-content container">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            Nền tảng xe hơi #1 Việt Nam
+          </div>
+
+          <h1 class="hero-title">
+            <span class="line">Khám Phá</span>
+            <span class="line"><span class="gradient-text">Thế Giới Xe Hơi</span></span>
+            <span class="line">Đẳng Cấp</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Tìm kiếm, so sánh và trải nghiệm hàng nghìn mẫu xe từ các thương hiệu hàng đầu thế giới. Nơi đam mê gặp gỡ công nghệ.
+          </p>
+
+          <div class="hero-btns">
+            <a href="#featured" class="btn-primary">
+              Khám phá ngay
+              <span>→</span>
+            </a>
+            <a href="#comparison" class="btn-outline">
+              So sánh xe
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number"><span class="counter" data-target="2500" data-suffix="+">0</span></div>
+              <div class="stat-label">Mẫu xe</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number"><span class="counter" data-target="150" data-suffix="+">0</span></div>
+              <div class="stat-label">Đại lý</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number"><span class="counter" data-target="50000" data-suffix="+">0</span></div>
+              <div class="stat-label">Khách hàng</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=650&q=80" alt="Mercedes luxury car" class="hero-car-img">
+          <div class="floating-card floating-card-1">
+            <div class="fc-label">Tốc độ tối đa</div>
+            <div class="fc-value accent">320 km/h</div>
+          </div>
+          <div class="floating-card floating-card-2">
+            <div class="fc-label">0-100 km/h</div>
+            <div class="fc-value">3.2 giây</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SEARCH BAR
+       ============================================ -->
+  <section class="search-section">
+    <div class="container">
+      <div class="search-box reveal-scale">
+        <div class="search-field">
+          <label>Hãng xe</label>
+          <select id="search-brand">
+            <option value="">Tất cả hãng xe</option>
+            <option>Mercedes-Benz</option>
+            <option>BMW</option>
+            <option>Audi</option>
+            <option>Toyota</option>
+            <option>Honda</option>
+            <option>Porsche</option>
+            <option>Tesla</option>
+            <option>Lexus</option>
+            <option>VinFast</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label>Loại xe</label>
+          <select id="search-type">
+            <option value="">Tất cả loại</option>
+            <option>Sedan</option>
+            <option>SUV</option>
+            <option>Coupe</option>
+            <option>Xe điện</option>
+            <option>Xe thể thao</option>
+            <option>Bán tải</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label>Khoảng giá</label>
+          <select id="search-price">
+            <option value="">Tất cả mức giá</option>
+            <option>Dưới 500 triệu</option>
+            <option>500 triệu - 1 tỷ</option>
+            <option>1 tỷ - 2 tỷ</option>
+            <option>2 tỷ - 5 tỷ</option>
+            <option>Trên 5 tỷ</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label>Năm sản xuất</label>
+          <select id="search-year">
+            <option value="">Tất cả</option>
+            <option>2025</option>
+            <option>2024</option>
+            <option>2023</option>
+            <option>2022</option>
+          </select>
+        </div>
+        <button class="search-btn" type="button">
+          🔍 Tìm xe
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       BRANDS
+       ============================================ -->
+  <section class="brands">
+    <div class="container">
+      <div class="brands-track">
+        <div class="brands-slider">
+          <div class="brand-item"><span class="brand-logo">🔷</span><span class="brand-name">BMW</span></div>
+          <div class="brand-item"><span class="brand-logo">⭐</span><span class="brand-name">Mercedes</span></div>
+          <div class="brand-item"><span class="brand-logo">🔘</span><span class="brand-name">Audi</span></div>
+          <div class="brand-item"><span class="brand-logo">🔴</span><span class="brand-name">Toyota</span></div>
+          <div class="brand-item"><span class="brand-logo">🏎️</span><span class="brand-name">Porsche</span></div>
+          <div class="brand-item"><span class="brand-logo">⚡</span><span class="brand-name">Tesla</span></div>
+          <div class="brand-item"><span class="brand-logo">🟡</span><span class="brand-name">Lamborghini</span></div>
+          <div class="brand-item"><span class="brand-logo">🐎</span><span class="brand-name">Ferrari</span></div>
+          <div class="brand-item"><span class="brand-logo">🔵</span><span class="brand-name">Honda</span></div>
+          <div class="brand-item"><span class="brand-logo">💎</span><span class="brand-name">Lexus</span></div>
+          <div class="brand-item"><span class="brand-logo">🇻🇳</span><span class="brand-name">VinFast</span></div>
+          <div class="brand-item"><span class="brand-logo">🌀</span><span class="brand-name">Volvo</span></div>
+          <!-- Duplicate for seamless scroll -->
+          <div class="brand-item"><span class="brand-logo">🔷</span><span class="brand-name">BMW</span></div>
+          <div class="brand-item"><span class="brand-logo">⭐</span><span class="brand-name">Mercedes</span></div>
+          <div class="brand-item"><span class="brand-logo">🔘</span><span class="brand-name">Audi</span></div>
+          <div class="brand-item"><span class="brand-logo">🔴</span><span class="brand-name">Toyota</span></div>
+          <div class="brand-item"><span class="brand-logo">🏎️</span><span class="brand-name">Porsche</span></div>
+          <div class="brand-item"><span class="brand-logo">⚡</span><span class="brand-name">Tesla</span></div>
+          <div class="brand-item"><span class="brand-logo">🟡</span><span class="brand-name">Lamborghini</span></div>
+          <div class="brand-item"><span class="brand-logo">🐎</span><span class="brand-name">Ferrari</span></div>
+          <div class="brand-item"><span class="brand-logo">🔵</span><span class="brand-name">Honda</span></div>
+          <div class="brand-item"><span class="brand-logo">💎</span><span class="brand-name">Lexus</span></div>
+          <div class="brand-item"><span class="brand-logo">🇻🇳</span><span class="brand-name">VinFast</span></div>
+          <div class="brand-item"><span class="brand-logo">🌀</span><span class="brand-name">Volvo</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FEATURED CARS
+       ============================================ -->
+  <section class="featured" id="featured">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Bộ sưu tập</div>
+        <h2 class="section-title">Xe <span class="gradient-text">Nổi Bật</span></h2>
+        <p class="section-desc">Khám phá những mẫu xe được yêu thích nhất, từ siêu xe đến xe sang trọng và xe điện thế hệ mới.</p>
+      </div>
+
+      <div class="featured-tabs reveal">
+        <button class="featured-tab active" data-filter="all">Tất cả</button>
+        <button class="featured-tab" data-filter="sedan">Sedan</button>
+        <button class="featured-tab" data-filter="suv">SUV</button>
+        <button class="featured-tab" data-filter="sport">Thể thao</button>
+        <button class="featured-tab" data-filter="electric">Xe điện</button>
+      </div>
+
+      <div class="cars-grid stagger-children">
+        <!-- Car 1 -->
+        <div class="car-card" data-category="sedan">
+          <div class="car-card-image">
+            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&q=80" alt="Mercedes S-Class">
+            <span class="car-card-badge badge-new">Mới</span>
+            <button class="car-card-wishlist" aria-label="Yêu thích">🤍</button>
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">Mercedes-Benz</div>
+            <h3 class="car-card-name">S-Class 2025</h3>
+            <div class="car-card-specs">
+              <div class="spec-item"><span class="spec-icon">⚡</span> 503 HP</div>
+              <div class="spec-item"><span class="spec-icon">🏁</span> 250 km/h</div>
+              <div class="spec-item"><span class="spec-icon">⛽</span> Hybrid</div>
+            </div>
+            <div class="car-card-footer">
+              <div class="car-price">5.2 tỷ <span class="price-unit">VNĐ</span></div>
+              <a href="#" class="car-detail-btn">Chi tiết →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 2 -->
+        <div class="car-card" data-category="sport">
+          <div class="car-card-image">
+            <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=600&q=80" alt="Ferrari Roma">
+            <span class="car-card-badge badge-hot">Hot</span>
+            <button class="car-card-wishlist" aria-label="Yêu thích">🤍</button>
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">Ferrari</div>
+            <h3 class="car-card-name">Roma 2025</h3>
+            <div class="car-card-specs">
+              <div class="spec-item"><span class="spec-icon">⚡</span> 620 HP</div>
+              <div class="spec-item"><span class="spec-icon">🏁</span> 320 km/h</div>
+              <div class="spec-item"><span class="spec-icon">⛽</span> Xăng</div>
+            </div>
+            <div class="car-card-footer">
+              <div class="car-price">18.5 tỷ <span class="price-unit">VNĐ</span></div>
+              <a href="#" class="car-detail-btn">Chi tiết →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 3 -->
+        <div class="car-card" data-category="electric">
+          <div class="car-card-image">
+            <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=600&q=80" alt="Tesla Model S">
+            <span class="car-card-badge badge-electric">Điện</span>
+            <button class="car-card-wishlist" aria-label="Yêu thích">🤍</button>
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">Tesla</div>
+            <h3 class="car-card-name">Model S Plaid</h3>
+            <div class="car-card-specs">
+              <div class="spec-item"><span class="spec-icon">⚡</span> 1020 HP</div>
+              <div class="spec-item"><span class="spec-icon">🏁</span> 322 km/h</div>
+              <div class="spec-item"><span class="spec-icon">🔋</span> Điện</div>
+            </div>
+            <div class="car-card-footer">
+              <div class="car-price">4.8 tỷ <span class="price-unit">VNĐ</span></div>
+              <a href="#" class="car-detail-btn">Chi tiết →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 4 -->
+        <div class="car-card" data-category="suv">
+          <div class="car-card-image">
+            <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=600&q=80" alt="BMW X7">
+            <span class="car-card-badge badge-new">Mới</span>
+            <button class="car-card-wishlist" aria-label="Yêu thích">🤍</button>
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">BMW</div>
+            <h3 class="car-card-name">X7 M60i 2025</h3>
+            <div class="car-card-specs">
+              <div class="spec-item"><span class="spec-icon">⚡</span> 530 HP</div>
+              <div class="spec-item"><span class="spec-icon">🏁</span> 250 km/h</div>
+              <div class="spec-item"><span class="spec-icon">⛽</span> Xăng</div>
+            </div>
+            <div class="car-card-footer">
+              <div class="car-price">7.5 tỷ <span class="price-unit">VNĐ</span></div>
+              <a href="#" class="car-detail-btn">Chi tiết →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 5 -->
+        <div class="car-card" data-category="sport">
+          <div class="car-card-image">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80" alt="Porsche 911">
+            <span class="car-card-badge badge-hot">Hot</span>
+            <button class="car-card-wishlist" aria-label="Yêu thích">🤍</button>
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">Porsche</div>
+            <h3 class="car-card-name">911 Turbo S 2025</h3>
+            <div class="car-card-specs">
+              <div class="spec-item"><span class="spec-icon">⚡</span> 650 HP</div>
+              <div class="spec-item"><span class="spec-icon">🏁</span> 330 km/h</div>
+              <div class="spec-item"><span class="spec-icon">⛽</span> Xăng</div>
+            </div>
+            <div class="car-card-footer">
+              <div class="car-price">15.8 tỷ <span class="price-unit">VNĐ</span></div>
+              <a href="#" class="car-detail-btn">Chi tiết →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 6 -->
+        <div class="car-card" data-category="electric">
+          <div class="car-card-image">
+            <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600&q=80" alt="Audi e-tron GT">
+            <span class="car-card-badge badge-electric">Điện</span>
+            <button class="car-card-wishlist" aria-label="Yêu thích">🤍</button>
+          </div>
+          <div class="car-card-body">
+            <div class="car-card-brand">Audi</div>
+            <h3 class="car-card-name">RS e-tron GT</h3>
+            <div class="car-card-specs">
+              <div class="spec-item"><span class="spec-icon">⚡</span> 646 HP</div>
+              <div class="spec-item"><span class="spec-icon">🏁</span> 250 km/h</div>
+              <div class="spec-item"><span class="spec-icon">🔋</span> Điện</div>
+            </div>
+            <div class="car-card-footer">
+              <div class="car-price">6.2 tỷ <span class="price-unit">VNĐ</span></div>
+              <a href="#" class="car-detail-btn">Chi tiết →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="featured-more reveal">
+        <a href="#" class="btn-outline">Xem tất cả xe →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CATEGORIES
+       ============================================ -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Phân loại</div>
+        <h2 class="section-title">Danh Mục <span class="gradient-text">Xe Hơi</span></h2>
+        <p class="section-desc">Chọn loại xe phù hợp với phong cách và nhu cầu sử dụng của bạn.</p>
+      </div>
+
+      <div class="categories-grid stagger-children">
+        <div class="category-card">
+          <div class="category-icon">🚗</div>
+          <div class="category-name">Sedan</div>
+          <div class="category-count">485 xe</div>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">🚙</div>
+          <div class="category-name">SUV</div>
+          <div class="category-count">372 xe</div>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">🏎️</div>
+          <div class="category-name">Thể thao</div>
+          <div class="category-count">156 xe</div>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">⚡</div>
+          <div class="category-name">Xe điện</div>
+          <div class="category-count">298 xe</div>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">🛻</div>
+          <div class="category-name">Bán tải</div>
+          <div class="category-count">124 xe</div>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">🏁</div>
+          <div class="category-name">Coupe</div>
+          <div class="category-count">203 xe</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       WHY CHOOSE US
+       ============================================ -->
+  <section class="why-us" id="why-us">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Tại sao chọn chúng tôi</div>
+        <h2 class="section-title">Trải Nghiệm <span class="gradient-text">Vượt Trội</span></h2>
+        <p class="section-desc">AutoVerse mang đến trải nghiệm tìm kiếm và mua xe hoàn hảo với dịch vụ đẳng cấp.</p>
+      </div>
+
+      <div class="why-grid stagger-children">
+        <div class="why-card">
+          <div class="why-card-icon">🛡️</div>
+          <h3 class="why-card-title">Xe chính hãng</h3>
+          <p class="why-card-desc">100% xe được nhập khẩu chính hãng với đầy đủ giấy tờ pháp lý và bảo hành toàn diện.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">💰</div>
+          <h3 class="why-card-title">Giá tốt nhất</h3>
+          <p class="why-card-desc">Cam kết mức giá cạnh tranh nhất thị trường cùng nhiều chương trình ưu đãi hấp dẫn.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">🔧</div>
+          <h3 class="why-card-title">Hỗ trợ 24/7</h3>
+          <p class="why-card-desc">Đội ngũ tư vấn chuyên nghiệp sẵn sàng hỗ trợ bạn mọi lúc, mọi nơi.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">🚀</div>
+          <h3 class="why-card-title">Giao xe nhanh</h3>
+          <p class="why-card-desc">Quy trình mua xe nhanh chóng, giao xe tận nơi trong vòng 48 giờ trên toàn quốc.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       COMPARISON
+       ============================================ -->
+  <section class="comparison" id="comparison">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">So sánh xe</div>
+        <h2 class="section-title">So Sánh <span class="gradient-text">Chi Tiết</span></h2>
+        <p class="section-desc">Đặt hai mẫu xe cạnh nhau để dễ dàng đưa ra quyết định chính xác nhất.</p>
+      </div>
+
+      <div class="comparison-wrapper reveal">
+        <!-- Car A -->
+        <div class="compare-car">
+          <div class="compare-car-header">
+            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=500&q=80" alt="BMW 7 Series" class="compare-car-img">
+            <h3 class="compare-car-name">BMW 7 Series</h3>
+            <div class="compare-car-price">6.5 tỷ VNĐ</div>
+          </div>
+          <div class="compare-specs">
+            <div class="compare-spec-row">
+              <span class="compare-spec-label">Động cơ</span>
+              <span class="compare-spec-value">4.4L V8 Twin-Turbo</span>
+            </div>
+            <div class="compare-spec-row">
+              <span class="compare-spec-label">Công suất</span>
+              <span class="compare-spec-value winner">536 HP</span>
+            </div>
+            <div class="compare-spec-row">
+              <span class="compare-spec-label">0-100 km/h</span>
+              <span class="compare-spec-value winner">3.7 giây</span>
+            </div>
+            <div class="compare-spec-row">
+              <span class="compare-spec-label">Hộp số</span>
+              <span class="compare-spec-value">8AT ZF</span>
+            </div>
+            <div class="compare-spec-row">
+              <span class="compare-spec-label">Nhiên liệu</span>
+              <span class="compare-spec-value">11.5L/100km</span>
+            </div>
+            <div class="compare-spec-row">
+              <span class="compare-spec-label">Trọng lượng</span>
+              <span class="compare-spec-value winner">2,100 kg</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- VS Badge -->
+        <div class="compare-vs">
+          <div class="vs-badge">VS</div>
+        </div>
+
+        <!-- Car B -->
+        <div class="compare-car">
+          <div class="compare-car-header">
+            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=500&q=80" alt="Mercedes S-Class" class="compare-car-img">
+            <h3 class="compare-car-name">Mercedes S-Class</h3>
+            <div class="compare-car-price">5.9 tỷ VNĐ</div>
+          </div>
+          <div class="compare-specs">
+            <div class="compare-spec-row">
+              <span class="compare-spec-label">Động cơ</span>
+              <span class="compare-spec-value">4.0L V8 Biturbo</span>
+            </div>
+            <div class="compare-spec-row">
+              <span class="compare-spec-label">Công suất</span>
+              <span class="compare-spec-value">503 HP</span>
+            </div>
+            <div class="compare-spec-row">
+              <span class="compare-spec-label">0-100 km/h</span>
+              <span class="compare-spec-value">4.1 giây</span>
+            </div>
+            <div class="compare-spec-row">
+              <span class="compare-spec-label">Hộp số</span>
+              <span class="compare-spec-value">9AT AMG</span>
+            </div>
+            <div class="compare-spec-row">
+              <span class="compare-spec-label">Nhiên liệu</span>
+              <span class="compare-spec-value winner">10.2L/100km</span>
+            </div>
+            <div class="compare-spec-row">
+              <span class="compare-spec-label">Trọng lượng</span>
+              <span class="compare-spec-value">2,250 kg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       NEWS
+       ============================================ -->
+  <section class="news" id="news">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Tin tức & Đánh giá</div>
+        <h2 class="section-title">Tin Tức <span class="gradient-text">Mới Nhất</span></h2>
+        <p class="section-desc">Cập nhật thông tin mới nhất về thế giới xe hơi, đánh giá chuyên sâu và xu hướng công nghệ.</p>
+      </div>
+
+      <div class="news-grid stagger-children">
+        <!-- News 1 -->
+        <article class="news-card">
+          <div class="news-card-image">
+            <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&q=80" alt="Xe điện tương lai">
+          </div>
+          <div class="news-card-body">
+            <div class="news-card-meta">
+              <span class="news-tag">Xe điện</span>
+              <span class="news-date">09/09/2025</span>
+            </div>
+            <h3 class="news-card-title">Tương lai xe điện: Pin thể rắn sẽ thay đổi mọi thứ</h3>
+            <p class="news-card-excerpt">Công nghệ pin thể rắn hứa hẹn mang lại quãng đường di chuyển gấp đôi, thời gian sạc nhanh hơn và an toàn vượt trội so với pin lithium-ion hiện tại.</p>
+            <a href="#" class="news-read-more">Đọc tiếp →</a>
+          </div>
+        </article>
+
+        <!-- News 2 -->
+        <article class="news-card">
+          <div class="news-card-image">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&q=80" alt="Siêu xe 2025">
+          </div>
+          <div class="news-card-body">
+            <div class="news-card-meta">
+              <span class="news-tag">Đánh giá</span>
+              <span class="news-date">08/09/2025</span>
+            </div>
+            <h3 class="news-card-title">Top 10 siêu xe đáng mong đợi nhất năm 2025</h3>
+            <p class="news-card-excerpt">Danh sách những siêu xe mạnh mẽ và đẹp nhất sắp ra mắt, từ Lamborghini Revuelto đến McLaren W1 với công nghệ hybrid tiên tiến.</p>
+            <a href="#" class="news-read-more">Đọc tiếp →</a>
+          </div>
+        </article>
+
+        <!-- News 3 -->
+        <article class="news-card">
+          <div class="news-card-image">
+            <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=600&q=80" alt="Công nghệ tự lái">
+          </div>
+          <div class="news-card-body">
+            <div class="news-card-meta">
+              <span class="news-tag">Công nghệ</span>
+              <span class="news-date">07/09/2025</span>
+            </div>
+            <h3 class="news-card-title">Xe tự lái cấp độ 4: Đã sẵn sàng cho đường phố Việt Nam?</h3>
+            <p class="news-card-excerpt">Phân tích chi tiết về công nghệ tự lái cấp độ 4 và khả năng ứng dụng trong điều kiện giao thông đặc thù tại Việt Nam.</p>
+            <a href="#" class="news-read-more">Đọc tiếp →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TESTIMONIALS
+       ============================================ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Đánh giá</div>
+        <h2 class="section-title">Khách Hàng <span class="gradient-text">Nói Gì</span></h2>
+        <p class="section-desc">Hơn 50,000 khách hàng đã tin tưởng và hài lòng với dịch vụ của chúng tôi.</p>
+      </div>
+
+      <div class="testimonials-slider stagger-children">
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Trải nghiệm mua xe tại AutoVerse vượt xa mong đợi. Đội ngũ tư vấn rất chuyên nghiệp, quy trình nhanh chóng và minh bạch. Tôi rất hài lòng với chiếc Mercedes S-Class.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">NM</div>
+            <div>
+              <div class="testimonial-name">Nguyễn Minh Tuấn</div>
+              <div class="testimonial-role">CEO, Công ty TMT</div>
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Công cụ so sánh xe rất hữu ích, giúp tôi dễ dàng chọn được chiếc BMW X7 phù hợp. Giá cả cạnh tranh, dịch vụ hậu mãi tuyệt vời!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">TL</div>
+            <div>
+              <div class="testimonial-name">Trần Lan Phương</div>
+              <div class="testimonial-role">Doanh nhân</div>
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">Tôi đã tìm được chiếc Tesla Model S mơ ước qua AutoVerse. Quy trình đặt xe online rất thuận tiện, giao xe đúng hẹn và chất lượng hoàn hảo.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">PH</div>
+            <div>
+              <div class="testimonial-name">Phạm Hoàng Dũng</div>
+              <div class="testimonial-role">Kỹ sư phần mềm</div>
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA / NEWSLETTER
+       ============================================ -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <div class="cta-box reveal-scale">
+        <div class="cta-orb cta-orb-1"></div>
+        <div class="cta-orb cta-orb-2"></div>
+        <div class="cta-content">
+          <h2 class="cta-title">Sẵn Sàng <span class="gradient-text">Lái Thử?</span></h2>
+          <p class="cta-desc">Đăng ký ngay để nhận lịch lái thử miễn phí và cập nhật những ưu đãi xe mới nhất.</p>
+          <form class="cta-form" id="newsletter-form">
+            <input type="email" class="cta-input" placeholder="Nhập email của bạn..." required>
+            <button type="submit" class="cta-submit">Đăng ký</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-icon">🏎️</span>
+            <span>Auto<span class="gradient-text">Verse</span></span>
+          </div>
+          <p>Nền tảng khám phá và tìm kiếm xe hơi hàng đầu Việt Nam. Kết nối bạn với chiếc xe mơ ước chỉ trong vài cú click.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+            <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Khám phá</h4>
+          <ul>
+            <li><a href="#">Xe mới</a></li>
+            <li><a href="#">Xe đã qua sử dụng</a></li>
+            <li><a href="#">So sánh xe</a></li>
+            <li><a href="#">Đánh giá xe</a></li>
+            <li><a href="#">Bảng giá xe</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Dịch vụ</h4>
+          <ul>
+            <li><a href="#">Đặt lịch lái thử</a></li>
+            <li><a href="#">Tài chính & trả góp</a></li>
+            <li><a href="#">Bảo hiểm xe</a></li>
+            <li><a href="#">Bảo dưỡng</a></li>
+            <li><a href="#">Trade-in</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Liên hệ</h4>
+          <ul>
+            <li><a href="#">📍 123 Nguyễn Huệ, Q.1, TP.HCM</a></li>
+            <li><a href="tel:19001234">📞 1900 1234</a></li>
+            <li><a href="mailto:info@autoverse.vn">📧 info@autoverse.vn</a></li>
+            <li><a href="#">🕐 T2-CN: 8:00 - 20:00</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 AutoVerse. Bảo lưu mọi quyền.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Chính sách bảo mật</a>
+          <a href="#">Điều khoản sử dụng</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Lên đầu trang">↑</button>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
